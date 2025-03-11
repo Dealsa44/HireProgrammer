@@ -1,0 +1,292 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 60px 20px; 
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+  }
+}
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  animation: fadeIn 1.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 80px 15px; 
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); 
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: slideInUp 1s ease-in-out;
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px; 
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem; 
+      }
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.features-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px; 
+  animation: fadeIn 1.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 40px 15px; 
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 40px; 
+    animation: slideInLeft 1s ease-in-out;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem; 
+      margin-bottom: 30px;
+    }
+  }
+
+  .features-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      gap: 15px; 
+    }
+  }
+
+  .feature-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+
+    @media (max-width: 768px) {
+      width: 100%; 
+      max-width: 300px;
+      padding: 15px;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-icon {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      width: 60px; 
+      height: 60px; 
+      border-radius: 50%;
+      margin: 0 auto 15px; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+      @media (max-width: 768px) {
+        width: 50px; 
+        height: 50px; 
+        font-size: 20px;
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem; 
+      color: #333;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    p {
+      font-size: 0.9rem; 
+      color: #666;
+
+      @media (max-width: 768px) {
+        font-size: 0.85rem; 
+      }
+    }
+  }
+}
+
+.testimonials-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 40px 15px; 
+  }
+
+  h2 {
+    font-size: 2.2rem; 
+    color: #333;
+    margin-bottom: 40px;
+    animation: slideInLeft 1s ease-in-out;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      margin-bottom: 30px; 
+    }
+  }
+
+  .testimonials-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+  }
+
+  .testimonial-card {
+    background-color: #f4f7fa;
+    padding: 20px; 
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-style: italic;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+
+    @media (max-width: 768px) {
+      width: 100%; 
+      max-width: 300px;
+      padding: 15px;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h4 {
+      font-size: 1.1rem; 
+      margin-top: 15px; 
+      color: #2575fc;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+
+      @media (max-width: 768px) {
+        font-size: 0.9rem; 
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

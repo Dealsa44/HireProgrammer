@@ -1,0 +1,162 @@
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+
+  @media (max-width: 768px) { 
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #333;
+    animation: slideInDown 1s ease-in-out;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+
+    @media (max-width: 768px) {
+      margin-bottom: 1.2rem; 
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      color: #555;
+
+      @media (max-width: 768px) {
+        font-size: 1rem; 
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;  // Ensure proper box model calculation
+
+      @media (max-width: 768px) {
+        padding: 0.6rem; 
+        font-size: 0.9rem; 
+      }
+
+      &:focus {
+        border-color: #6a11cb;
+        box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+
+    @media (max-width: 768px) {
+      padding: 0.6rem; 
+      font-size: 1rem; 
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(106, 17, 203, 0.3);
+    }
+  }
+
+  .error-message {
+    color: #ff4757;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    animation: shake 0.5s ease-in-out;
+
+    @media (max-width: 768px) {
+      margin-top: 0.8rem; 
+      font-size: 0.9rem; 
+    }
+  }
+
+  a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #2575fc;
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+}
