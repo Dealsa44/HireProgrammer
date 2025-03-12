@@ -33,16 +33,13 @@
   </section>
   <section class="testimonials-section" id="testimonials">
     <h2>What Our Clients Say</h2>
-    <div class="testimonials-list">
-      <div class="testimonial-card">
-        <p>"The team delivered a custom e-commerce website that exceeded all expectations. Fast, reliable, and professional!"</p>
-        <h4>Jane Doe</h4>
-        <p>CEO, FashionHub</p>
-      </div>
-      <div class="testimonial-card">
-        <p>"They developed a mobile app for our startup that is now one of our main revenue drivers. Great work!"</p>
-        <h4>John Smith</h4>
-        <p>Founder, Tech Innovations</p>
+    <div *ngIf="isLoading">Loading Comments...</div>
+    <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+    <div *ngIf="!isLoading && !errorMessage" class="testimonials-list">
+      <div *ngFor="let comment of comments" class="testimonial-card">
+        <p>{{comment.body}}</p>
+        <h4>{{comment.name}}</h4>
+        <p>{{comment.email}}</p>
       </div>
     </div>
   </section>
