@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +12,9 @@ a {
   color: inherit;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -22,19 +24,19 @@ section {
   text-align: center;
 
   @media (max-width: 768px) {
-    padding: 40px 15px; 
+    padding: 40px 15px;
   }
 }
 
 .hero-section {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
-  padding: 100px 20px; 
+  padding: 100px 20px;
   color: white;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   animation: fadeIn 1.5s ease-in-out;
 
   @media (max-width: 768px) {
-    padding: 80px 15px; 
+    padding: 80px 15px;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   }
 
@@ -44,17 +46,17 @@ section {
     animation: slideInLeft 1s ease-in-out;
 
     @media (max-width: 768px) {
-      font-size: 2.5rem; 
+      font-size: 2.5rem;
     }
   }
 
   .hero-content p {
-    font-size: 1.25rem; 
-    margin-bottom: 20px; 
+    font-size: 1.25rem;
+    margin-bottom: 20px;
     animation: slideInRight 1s ease-in-out;
 
     @media (max-width: 768px) {
-      font-size: 1rem; 
+      font-size: 1rem;
     }
   }
 }
@@ -66,35 +68,35 @@ section {
   h2 {
     font-size: 2.2rem;
     color: #333;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
     animation: slideInLeft 1s ease-in-out;
 
     @media (max-width: 768px) {
-      font-size: 1.8rem; 
+      font-size: 1.8rem;
       margin-bottom: 30px;
     }
   }
 
   p {
-    font-size: 1rem; 
+    font-size: 1rem;
     color: #666;
     max-width: 800px;
     margin: 0 auto;
     animation: slideInRight 1s ease-in-out;
 
     @media (max-width: 768px) {
-      font-size: 0.9rem; 
+      font-size: 0.9rem;
     }
   }
 }
 
 .team-section {
   background-color: #f9f9f9;
-  padding: 60px 20px; 
+  padding: 60px 20px;
   animation: fadeIn 1.5s ease-in-out;
 
   @media (max-width: 768px) {
-    padding: 40px 15px; 
+    padding: 40px 15px;
   }
 
   h2 {
@@ -105,14 +107,14 @@ section {
 
     @media (max-width: 768px) {
       font-size: 1.8rem;
-      margin-bottom: 30px; 
+      margin-bottom: 30px;
     }
   }
 
   .team-members {
     display: flex;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
     flex-wrap: wrap;
 
     @media (max-width: 768px) {
@@ -123,17 +125,19 @@ section {
   .team-member {
     background-color: #fff;
     border-radius: 12px;
-    padding: 20px; 
-    width: 250px; 
+    padding: 20px;
+    width: 250px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     animation: fadeInUp 1s ease-in-out;
 
     @media (max-width: 768px) {
-      width: 100%; 
-      max-width: 300px; 
-      padding: 15px; 
+      width: 100%;
+      max-width: 300px;
+      padding: 15px;
     }
 
     &:hover {
@@ -156,7 +160,7 @@ section {
       color: #666;
 
       @media (max-width: 768px) {
-        font-size: 0.85rem; 
+        font-size: 0.85rem;
       }
     }
   }
@@ -174,11 +178,11 @@ section {
   h2 {
     font-size: 2.2rem;
     color: #333;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
     animation: slideInLeft 1s ease-in-out;
 
     @media (max-width: 768px) {
-      font-size: 1.8rem; 
+      font-size: 1.8rem;
       margin-bottom: 30px;
     }
   }
@@ -201,13 +205,15 @@ section {
     width: 250px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     animation: fadeInUp 1s ease-in-out;
 
     @media (max-width: 768px) {
       width: 100%;
       max-width: 300px;
-      padding: 15px; 
+      padding: 15px;
     }
 
     &:hover {
@@ -216,7 +222,7 @@ section {
     }
 
     h3 {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
       color: #6a11cb;
       margin-bottom: 15px;
 
@@ -226,11 +232,11 @@ section {
     }
 
     p {
-      font-size: 0.9rem; 
+      font-size: 0.9rem;
       color: #666;
 
       @media (max-width: 768px) {
-        font-size: 0.85rem; 
+        font-size: 0.85rem;
       }
     }
   }

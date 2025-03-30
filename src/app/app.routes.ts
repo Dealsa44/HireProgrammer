@@ -7,6 +7,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { RegistrationComponent } from './auth/registration/registration.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,7 +17,9 @@ export const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'contact', component: ContactComponent},
+  { path: 'contact', component: ContactComponent },
   { path: 'register', component: RegistrationComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'profile-settings', component: ProfileSettingsComponent },
   { path: '**', redirectTo: '/home' },
 ];

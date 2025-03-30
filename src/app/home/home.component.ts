@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
   comments: any[] = [];
   isLoading = true;
   errorMessage = '';
@@ -20,12 +20,12 @@ export class HomeComponent implements OnInit{
   }
 
   fetchComments(): void {
-    this.http.get('https://jsonplaceholder.typicode.com/comments' ).subscribe({
-      next: (data:any) => {
+    this.http.get('https://jsonplaceholder.typicode.com/comments').subscribe({
+      next: (data: any) => {
         this.comments = data.slice(0, 5);
         this.isLoading = false;
       },
-      error: (err) =>{
+      error: (err) => {
         this.errorMessage = 'Failed to load  comments';
         this.isLoading = false;
       },

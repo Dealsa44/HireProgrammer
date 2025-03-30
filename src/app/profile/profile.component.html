@@ -1,9 +1,13 @@
 <div class="profile-container">
   <div class="profile-header">
     <div class="user-info">
-      <h1>User</h1>
+      <h1>{{ currentUser?.username || "User" }}</h1>
       <p class="role">Client</p>
       <p class="location">Georgia, Tbilisi</p>
+      <p>{{ currentUser?.email }}</p>
+    </div>
+    <div class="settings-icon" (click)="navigateToSettings()">
+      <i class="fas fa-cog"></i>
     </div>
   </div>
   <div class="subscription-info">
@@ -12,8 +16,13 @@
   <div class="projects-section">
     <h2>Current Projects</h2>
     <ul>
-      <li><span>Website Redesign</span> - <span class="status">In Progress</span></li>
-      <li><span>Mobile App Development</span> - <span class="status">Completed</span></li>
+      <li>
+        <span>Website Redesign</span> - <span class="status">In Progress</span>
+      </li>
+      <li>
+        <span>Mobile App Development</span> -
+        <span class="status">Completed</span>
+      </li>
     </ul>
   </div>
   <div class="hire-developers">
@@ -65,7 +74,7 @@
         <p>Expert in Shopify, WooCommerce, and Magento</p>
       </div>
       <button class="hire-btn">Hire E-Commerce Developer</button>
-    </div>    
+    </div>
   </div>
 </div>
-<button id="logout"(click)="logout()">Logout</button>
+<button id="logout" (click)="logout()">Logout</button>

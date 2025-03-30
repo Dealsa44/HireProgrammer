@@ -2,13 +2,20 @@
   <section class="hero-section">
     <div class="hero-content">
       <h1>Our Services</h1>
-      <p>We offer a wide range of high-quality services to bring your digital products to life.</p>
+      <p>
+        We offer a wide range of high-quality services to bring your digital
+        products to life.
+      </p>
     </div>
   </section>
   <section class="service-section" id="frontend">
     <div class="service-card">
       <h2>Front-End Development</h2>
-      <p>We build beautiful, responsive, and user-friendly websites with the latest front-end technologies. From dynamic single-page applications to complex interfaces, we've got you covered.</p>
+      <p>
+        We build beautiful, responsive, and user-friendly websites with the
+        latest front-end technologies. From dynamic single-page applications to
+        complex interfaces, we've got you covered.
+      </p>
       <ul>
         <li>HTML5, CSS3, JavaScript</li>
         <li>Angular, React, Vue.js</li>
@@ -21,7 +28,11 @@
   <section class="service-section" id="backend">
     <div class="service-card">
       <h2>Back-End Development</h2>
-      <p>Our back-end development services focus on creating robust, scalable, and secure server-side solutions to ensure your application runs smoothly and securely.</p>
+      <p>
+        Our back-end development services focus on creating robust, scalable,
+        and secure server-side solutions to ensure your application runs
+        smoothly and securely.
+      </p>
       <ul>
         <li>Node.js, Express.js</li>
         <li>Python, Django, Flask</li>
@@ -34,7 +45,11 @@
   <section class="service-section" id="design">
     <div class="service-card">
       <h2>UI/UX Design</h2>
-      <p>We provide stunning UI/UX designs that prioritize user experience. Our goal is to create interfaces that are not only visually appealing but also intuitive and easy to use.</p>
+      <p>
+        We provide stunning UI/UX designs that prioritize user experience. Our
+        goal is to create interfaces that are not only visually appealing but
+        also intuitive and easy to use.
+      </p>
       <ul>
         <li>User Research & Personas</li>
         <li>Wireframing & Prototyping</li>
@@ -47,7 +62,11 @@
   <section class="service-section" id="fullstack">
     <div class="service-card">
       <h2>Full-Stack Development</h2>
-      <p>As full-stack developers, we handle both the front-end and back-end, ensuring that your entire web application works seamlessly from end to end.</p>
+      <p>
+        As full-stack developers, we handle both the front-end and back-end,
+        ensuring that your entire web application works seamlessly from end to
+        end.
+      </p>
       <ul>
         <li>End-to-End Web Development</li>
         <li>Integrating Front-End & Back-End</li>
@@ -60,7 +79,11 @@
   <section class="service-section" id="mobile">
     <div class="service-card">
       <h2>Mobile App Development</h2>
-      <p>We design and develop custom mobile applications for iOS and Android, offering a seamless experience on both platforms with native and cross-platform technologies.</p>
+      <p>
+        We design and develop custom mobile applications for iOS and Android,
+        offering a seamless experience on both platforms with native and
+        cross-platform technologies.
+      </p>
       <ul>
         <li>React Native, Flutter</li>
         <li>iOS (Swift, Objective-C)</li>
@@ -73,7 +96,11 @@
   <section class="service-section" id="ecommerce">
     <div class="service-card">
       <h2>E-Commerce Development</h2>
-      <p>We build fully functional and scalable e-commerce platforms that are tailored to your business. Whether it’s a small shop or a large marketplace, we deliver a seamless shopping experience.</p>
+      <p>
+        We build fully functional and scalable e-commerce platforms that are
+        tailored to your business. Whether it’s a small shop or a large
+        marketplace, we deliver a seamless shopping experience.
+      </p>
       <ul>
         <li>Custom E-Commerce Platforms</li>
         <li>Payment Gateway Integration</li>
@@ -87,21 +114,32 @@
     <h2>Our Projects</h2>
     <div *ngIf="isLoadingPosts || isLoadingPhotos">Loading Projects...</div>
     <div *ngIf="errorMessagePosts || errorMessagePhotos" class="error-message">
-      {{errorMessagePosts ||errorMessagePhotos}}
+      {{ errorMessagePosts || errorMessagePhotos }}
     </div>
-    <div *ngIf="!isLoadingPosts && !isLoadingPhotos &&!errorMessagePosts && !errorMessagePhotos" class="project-list">
-      <div *ngFor="let post of posts; let i =index" class="project-item">
+    <div
+      *ngIf="
+        !isLoadingPosts &&
+        !isLoadingPhotos &&
+        !errorMessagePosts &&
+        !errorMessagePhotos
+      "
+      class="project-list"
+    >
+      <div *ngFor="let post of posts; let i = index" class="project-item">
         <div *ngIf="photos[i]" class="project photo-card">
           <div class="photoleft-card">
-          <img [src]="photos[i].thumbnailUrl" [alt]="photos[i].title" class="photo">
-          <h3>{{photos[i].title}}</h3>
+            <img
+              [src]="photos[i].thumbnailUrl"
+              [alt]="photos[i].title"
+              class="photo"
+            />
+            <h3>{{ photos[i].title }}</h3>
           </div>
           <div class="project post-card">
-            <h3>{{post.title}}</h3>
-            <p>{{post.body}}</p>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.body }}</p>
           </div>
         </div>
-       
       </div>
     </div>
   </section>

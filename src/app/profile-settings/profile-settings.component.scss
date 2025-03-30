@@ -1,4 +1,4 @@
-.registration-container {
+.profile-settings-container {
   max-width: 400px;
   margin: 2rem auto;
   padding: 2rem;
@@ -44,6 +44,7 @@
       }
     }
 
+    select,
     input {
       width: 100%;
       padding: 0.75rem;
@@ -65,6 +66,12 @@
         box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
         outline: none;
       }
+    }
+
+    select {
+      appearance: none;
+      background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236a11cb'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e")
+        no-repeat right 0.75rem center/12px 12px;
     }
   }
 
@@ -106,26 +113,16 @@
     }
   }
 
-  p {
+  .success-message {
+    color: #2ed573;
     text-align: center;
     margin-top: 1rem;
     font-size: 1rem;
-    color: #666;
+    animation: fadeIn 1s ease-in-out;
 
     @media (max-width: 768px) {
+      margin-top: 0.8rem;
       font-size: 0.9rem;
-    }
-  }
-
-  a {
-    color: #6a11cb;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: #2575fc;
-      text-decoration: underline;
     }
   }
 }

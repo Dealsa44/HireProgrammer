@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { ActivatedRoute } from '@angular/router';
-import { of } from 'rxjs'; 
+import { of } from 'rxjs';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -15,9 +15,9 @@ describe('AppComponent', () => {
           provide: ActivatedRoute,
           useValue: {
             snapshot: {
-              paramMap: of({}), 
+              paramMap: of({}),
             },
-            queryParamMap: of({}), 
+            queryParamMap: of({}),
           },
         },
       ],

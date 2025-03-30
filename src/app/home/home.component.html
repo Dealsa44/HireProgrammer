@@ -2,7 +2,10 @@
   <section class="hero-section">
     <div class="hero-content">
       <h1>Need a Programmer? Let Us Build Your Future!</h1>
-      <p>From complex apps to beautiful websites, our team delivers top-notch development with precision and care. Hire us today!</p>
+      <p>
+        From complex apps to beautiful websites, our team delivers top-notch
+        development with precision and care. Hire us today!
+      </p>
     </div>
   </section>
   <section class="features-section" id="features">
@@ -13,35 +16,43 @@
           <i class="fas fa-code"></i>
         </div>
         <h3>Expert Developers</h3>
-        <p>Our team consists of highly skilled developers who know how to turn your ideas into functional code.</p>
+        <p>
+          Our team consists of highly skilled developers who know how to turn
+          your ideas into functional code.
+        </p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
           <i class="fas fa-rocket"></i>
         </div>
         <h3>Fast Delivery</h3>
-        <p>We understand the importance of deadlines and always deliver on time without compromising quality.</p>
+        <p>
+          We understand the importance of deadlines and always deliver on time
+          without compromising quality.
+        </p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
           <i class="fas fa-headset"></i>
         </div>
         <h3>24/7 Support</h3>
-        <p>We offer round-the-clock support to ensure your project progresses smoothly and issues are handled promptly.</p>
+        <p>
+          We offer round-the-clock support to ensure your project progresses
+          smoothly and issues are handled promptly.
+        </p>
       </div>
     </div>
   </section>
   <section class="testimonials-section" id="testimonials">
     <h2>What Our Clients Say</h2>
     <div *ngIf="isLoading">Loading Comments...</div>
-    <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
     <div *ngIf="!isLoading && !errorMessage" class="testimonials-list">
       <div *ngFor="let comment of comments" class="testimonial-card">
-        <p>{{comment.body}}</p>
-        <h4>{{comment.name}}</h4>
-        <p>{{comment.email}}</p>
+        <p>{{ comment.body }}</p>
+        <h4>{{ comment.name }}</h4>
+        <p>{{ comment.email }}</p>
       </div>
     </div>
   </section>
 </div>
- 

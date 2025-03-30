@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +12,9 @@ a {
   color: inherit;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
@@ -118,7 +120,9 @@ h1, h2, h3 {
           border: 1px solid #ccc;
           border-radius: 6px;
           margin-top: 5px;
-          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+          transition:
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
 
           @media (max-width: 768px) {
             font-size: 0.85rem;
@@ -145,7 +149,9 @@ h1, h2, h3 {
         border: none;
         cursor: pointer;
         margin-top: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
 
         @media (max-width: 768px) {
           font-size: 1rem;

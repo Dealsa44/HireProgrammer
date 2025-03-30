@@ -17,10 +17,12 @@ export class RegistrationComponent {
   password = '';
   errorMessage = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
 
   onSubmit(): void {
-
     this.errorMessage = '';
 
     if (!this.username || !this.email || !this.password) {
@@ -41,16 +43,16 @@ export class RegistrationComponent {
       this.errorMessage = 'Password should be at least 8 characters long';
       return;
     }
-    
+
     if (!/\d/.test(this.password)) {
       this.errorMessage = 'Password should contain at least one number';
       return;
     }
     if (!/[A-Z]/.test(this.password)) {
-      this.errorMessage = 'Password should contain at least one uppercase letter';
+      this.errorMessage =
+        'Password should contain at least one uppercase letter';
       return;
     }
-   
 
     if (this.authService.register(this.username, this.email, this.password)) {
       this.router.navigate(['/login']);

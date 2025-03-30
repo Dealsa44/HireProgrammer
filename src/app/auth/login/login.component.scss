@@ -7,7 +7,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 1s ease-in-out;
 
-  @media (max-width: 768px) { 
+  @media (max-width: 768px) {
     max-width: 90%;
     margin: 1rem auto;
     padding: 1rem;
@@ -30,7 +30,7 @@
     animation: fadeIn 1.5s ease-in-out;
 
     @media (max-width: 768px) {
-      margin-bottom: 1.2rem; 
+      margin-bottom: 1.2rem;
     }
 
     label {
@@ -40,7 +40,7 @@
       color: #555;
 
       @media (max-width: 768px) {
-        font-size: 1rem; 
+        font-size: 1rem;
       }
     }
 
@@ -50,12 +50,14 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      box-sizing: border-box;  // Ensure proper box model calculation
+      transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+      box-sizing: border-box;
 
       @media (max-width: 768px) {
-        padding: 0.6rem; 
-        font-size: 0.9rem; 
+        padding: 0.6rem;
+        font-size: 0.9rem;
       }
 
       &:focus {
@@ -75,12 +77,14 @@
     border-radius: 6px;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     animation: fadeInUp 1s ease-in-out;
 
     @media (max-width: 768px) {
-      padding: 0.6rem; 
-      font-size: 1rem; 
+      padding: 0.6rem;
+      font-size: 1rem;
     }
 
     &:hover {
@@ -97,8 +101,8 @@
     animation: shake 0.5s ease-in-out;
 
     @media (max-width: 768px) {
-      margin-top: 0.8rem; 
-      font-size: 0.9rem; 
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
     }
   }
 
@@ -119,6 +123,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -129,6 +134,7 @@
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -140,6 +146,7 @@
     transform: translateY(-50px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -147,15 +154,19 @@
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(-10px);
   }
+
   50% {
     transform: translateX(10px);
   }
+
   75% {
     transform: translateX(-10px);
   }
